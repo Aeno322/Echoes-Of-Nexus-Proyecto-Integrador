@@ -41,20 +41,6 @@ class Player:
         self.game.sound.player_pain.play()
         self.check_game_over()
 
-    def single_fire_event(self, event):
-        if event.type == pg.MOUSEBUTTONDOWN:
-            if event.button == 1 and not self.shot and self.game.weapon.can_shoot():
-                self.game.sound.shotgun.play()
-                self.shot = True
-                self.game.weapon.reloading = True
-                self.game.weapon.last_shot_time = pg.time.get_ticks()
-        elif event.type == pg.KEYDOWN:
-            if event.key in (pg.K_1, pg.K_2, pg.K_3, pg.K_4):
-                idx = event.key - pg.K_1
-                if idx < len(self.weapons):
-                    self.current_weapon_idx = idx
-                    self.game.weapon.equip(self.weapons[idx])
-
     def movement(self):
         sin_a = math.sin(self.angle)
         cos_a = math.cos(self.angle)
