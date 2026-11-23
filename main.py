@@ -86,7 +86,6 @@ class Game:
                 sys.exit()
             elif event.type == self.global_event:
                 self.global_trigger = True
-            self.player.single_fire_event(event)
 
     def run(self):
         while True:
