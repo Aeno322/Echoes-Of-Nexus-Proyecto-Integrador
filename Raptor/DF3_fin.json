@@ -1,0 +1,616 @@
+{
+  "version": 1,
+  "tabs": [
+    {
+      "id": "main",
+      "name": "main",
+      "type": "main"
+    }
+  ],
+  "selectedTabId": "main",
+  "docsByTab": {
+    "main": {
+      "nodes": {
+        "start": {
+          "id": "start",
+          "type": "Oval",
+          "text": "start",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "assign1",
+          "selected": false,
+          "running": false
+        },
+        "assign1": {
+          "id": "assign1",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "player1:=0",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "assign_1794872306871",
+          "selected": false,
+          "running": false
+        },
+        "end": {
+          "id": "end",
+          "type": "Oval",
+          "text": "end",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "assign_1794872306871": {
+          "id": "assign_1794872306871",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "player2:=0",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "assign_1794872628198",
+          "selected": false,
+          "running": false
+        },
+        "loop_1794872342111": {
+          "id": "loop_1794872342111",
+          "type": "Diamond",
+          "kind": "Loop",
+          "text": "player1 == 100 or player2 == 100",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "select_1794872365080",
+          "beforeId": null,
+          "afterId": "input_1794872500892",
+          "selected": false,
+          "running": false
+        },
+        "select_1794872365080": {
+          "id": "select_1794872365080",
+          "type": "Diamond",
+          "kind": "Selection",
+          "text": "player1 == 100 ",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "end",
+          "yesId": "output_1794872380587",
+          "noId": "output_1794872395113",
+          "selected": false,
+          "running": false
+        },
+        "output_1794872380587": {
+          "id": "output_1794872380587",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Player 1 Win\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "output_1794872395113": {
+          "id": "output_1794872395113",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Player 2 Win\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "input_1794872500892": {
+          "id": "input_1794872500892",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "player",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "select_1794872520739",
+          "selected": false,
+          "prompt": "\"Quien es el jugador\"",
+          "running": false
+        },
+        "select_1794872520739": {
+          "id": "select_1794872520739",
+          "type": "Diamond",
+          "kind": "Selection",
+          "text": "player == 1",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "yesId": "input_1794872539922",
+          "noId": "input_1794872906980",
+          "selected": false,
+          "running": false
+        },
+        "input_1794872539922": {
+          "id": "input_1794872539922",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "attack",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "select_1794872584501",
+          "selected": false,
+          "prompt": "\"Desea atacar al enemigo?",
+          "running": false
+        },
+        "select_1794872584501": {
+          "id": "select_1794872584501",
+          "type": "Diamond",
+          "kind": "Selection",
+          "text": "attack == \"si\"",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "yesId": "assignment_1794872658271",
+          "noId": "output_1794872812795",
+          "selected": false,
+          "running": false
+        },
+        "assign_1794872628198": {
+          "id": "assign_1794872628198",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "enemy1:=100",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "assign_1794872637723",
+          "selected": false,
+          "running": false
+        },
+        "assign_1794872637723": {
+          "id": "assign_1794872637723",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "enemy2:=100",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "assign_1794872683215",
+          "selected": false,
+          "running": false
+        },
+        "assignment_1794872658271": {
+          "id": "assignment_1794872658271",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "enemy1:=enemy1 - attack1",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "output_1794872718843",
+          "selected": true,
+          "running": false
+        },
+        "assign_1794872683215": {
+          "id": "assign_1794872683215",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "attack1:=10",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "assign_1794872696136",
+          "selected": false,
+          "running": false
+        },
+        "assign_1794872696136": {
+          "id": "assign_1794872696136",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "attack2:=10",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "loop_1794872342111",
+          "selected": false,
+          "running": false
+        },
+        "output_1794872718843": {
+          "id": "output_1794872718843",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Ataco al enemigo\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "output_1794872733062",
+          "selected": false,
+          "running": false
+        },
+        "output_1794872733062": {
+          "id": "output_1794872733062",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Ganaste 10 puntos\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "assign_1794872746837",
+          "selected": false,
+          "running": false
+        },
+        "assign_1794872746837": {
+          "id": "assign_1794872746837",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "player1:=player1 + 10",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "output_1794872812795": {
+          "id": "output_1794872812795",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"No ataco\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "output_1794872826087",
+          "selected": false,
+          "running": false
+        },
+        "output_1794872826087": {
+          "id": "output_1794872826087",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Perdio 2 puntos\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "assign_1794872842133",
+          "selected": false,
+          "running": false
+        },
+        "assign_1794872842133": {
+          "id": "assign_1794872842133",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "player1:=player1 - 2",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "input_1794872906980": {
+          "id": "input_1794872906980",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "attack",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "select_1794872937568",
+          "selected": false,
+          "prompt": "\"Desea atacar al enemigo\"",
+          "running": false
+        },
+        "select_1794872937568": {
+          "id": "select_1794872937568",
+          "type": "Diamond",
+          "kind": "Selection",
+          "text": "attack == \"si\"",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "yesId": "assignment_1794872962073",
+          "noId": "output_1794873093942",
+          "selected": false,
+          "running": false
+        },
+        "assignment_1794872962073": {
+          "id": "assignment_1794872962073",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "enemy2:=enemy2 - attack2",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "assign_1794873024806",
+          "selected": false,
+          "running": false
+        },
+        "assign_1794873024806": {
+          "id": "assign_1794873024806",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "player2:=player2 + 10",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "output_1794873040535",
+          "selected": false,
+          "running": false
+        },
+        "output_1794873040535": {
+          "id": "output_1794873040535",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Ataco al enemigo\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "output_1794873045415",
+          "selected": false,
+          "running": false
+        },
+        "output_1794873045415": {
+          "id": "output_1794873045415",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Gano 10 puntos\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "output_1794873093942": {
+          "id": "output_1794873093942",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"No ataco\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "output_1794873098111",
+          "selected": false,
+          "running": false
+        },
+        "output_1794873098111": {
+          "id": "output_1794873098111",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"perdio 2 puntos\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "assign_1794873107616",
+          "selected": false,
+          "running": false
+        },
+        "assign_1794873107616": {
+          "id": "assign_1794873107616",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "player2:=player2 - 2",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        }
+      },
+      "startId": "start",
+      "endId": "end"
+    }
+  }
+}

@@ -1,0 +1,443 @@
+{
+  "version": 1,
+  "tabs": [
+    {
+      "id": "main",
+      "name": "main",
+      "type": "main"
+    }
+  ],
+  "selectedTabId": "main",
+  "docsByTab": {
+    "main": {
+      "nodes": {
+        "start": {
+          "id": "start",
+          "type": "Oval",
+          "text": "start",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "loopMenu",
+          "selected": false
+        },
+        "end": {
+          "id": "end",
+          "type": "Oval",
+          "text": "end",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false
+        },
+        "loopMenu": {
+          "id": "loopMenu",
+          "type": "Diamond",
+          "kind": "Loop",
+          "text": "opcion == \"Salir\"",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "end",
+          "beforeId": "inOpcion",
+          "afterId": "aTurno",
+          "selected": false
+        },
+        "inOpcion": {
+          "id": "inOpcion",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "opcion",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "prompt": "\"Elige: Jugar o Salir\""
+        },
+        "aTurno": {
+          "id": "aTurno",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "turno:=1",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "aJuego",
+          "selected": false
+        },
+        "aJuego": {
+          "id": "aJuego",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "juego_terminado:=0",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "aResultado",
+          "selected": false
+        },
+        "aResultado": {
+          "id": "aResultado",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "resultado:=\"\"",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "aGano1",
+          "selected": false
+        },
+        "aGano1": {
+          "id": "aGano1",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "gano1:=0",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "aGano2",
+          "selected": false
+        },
+        "aGano2": {
+          "id": "aGano2",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "gano2:=0",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "aEmpate",
+          "selected": false
+        },
+        "aEmpate": {
+          "id": "aEmpate",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "empate:=0",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "loopTurnos",
+          "selected": false
+        },
+        "loopTurnos": {
+          "id": "loopTurnos",
+          "type": "Diamond",
+          "kind": "Loop",
+          "text": "juego_terminado == 1",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "selEmpate",
+          "beforeId": "inJ1",
+          "afterId": null,
+          "selected": false
+        },
+        "inJ1": {
+          "id": "inJ1",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "jugada1",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "selJ1",
+          "selected": false,
+          "prompt": "\"Jugada del Jugador 1\""
+        },
+        "selJ1": {
+          "id": "selJ1",
+          "type": "Diamond",
+          "kind": "Selection",
+          "text": "gano1 == 1 or empate == 1",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "selGate",
+          "yesId": "aFin1",
+          "noId": null,
+          "selected": false
+        },
+        "aFin1": {
+          "id": "aFin1",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "juego_terminado:=1",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false
+        },
+        "selGate": {
+          "id": "selGate",
+          "type": "Diamond",
+          "kind": "Selection",
+          "text": "juego_terminado == 0",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "yesId": "inJ2",
+          "noId": null,
+          "selected": false
+        },
+        "inJ2": {
+          "id": "inJ2",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "jugada2",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "selJ2",
+          "selected": false,
+          "prompt": "\"Jugada del Jugador 2\""
+        },
+        "selJ2": {
+          "id": "selJ2",
+          "type": "Diamond",
+          "kind": "Selection",
+          "text": "gano2 == 1 or empate == 1",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "yesId": "aFin2",
+          "noId": null,
+          "selected": false
+        },
+        "aFin2": {
+          "id": "aFin2",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "juego_terminado:=1",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false
+        },
+        "selEmpate": {
+          "id": "selEmpate",
+          "type": "Diamond",
+          "kind": "Selection",
+          "text": "empate == 1",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "outFin",
+          "yesId": "aResEmpate",
+          "noId": "selGano1",
+          "selected": false
+        },
+        "aResEmpate": {
+          "id": "aResEmpate",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "resultado:=\"Empate\"",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false
+        },
+        "selGano1": {
+          "id": "selGano1",
+          "type": "Diamond",
+          "kind": "Selection",
+          "text": "gano1 == 1",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "yesId": "aResJ1",
+          "noId": "aResJ2",
+          "selected": false
+        },
+        "aResJ1": {
+          "id": "aResJ1",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "resultado:=\"Ganó el Jugador 1\"",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false
+        },
+        "aResJ2": {
+          "id": "aResJ2",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "resultado:=\"Ganó el Jugador 2\"",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false
+        },
+        "outFin": {
+          "id": "outFin",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Fin de la partida: \" + resultado",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false
+        }
+      },
+      "startId": "start",
+      "endId": "end"
+    }
+  }
+}

@@ -1,0 +1,373 @@
+{
+  "version": 1,
+  "tabs": [
+    {
+      "id": "main",
+      "name": "main",
+      "type": "main"
+    }
+  ],
+  "selectedTabId": "main",
+  "docsByTab": {
+    "main": {
+      "nodes": {
+        "start": {
+          "id": "start",
+          "type": "Oval",
+          "text": "start",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "assign_1794870531197",
+          "selected": false,
+          "running": false
+        },
+        "assign1": {
+          "id": "assign1",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "enemy:=50",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "assign_1794870527531",
+          "selected": false,
+          "running": false
+        },
+        "end": {
+          "id": "end",
+          "type": "Oval",
+          "text": "end",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "assign_1794870527531": {
+          "id": "assign_1794870527531",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "daplayer:=10",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "assign_1794870529170",
+          "selected": false,
+          "running": false
+        },
+        "assign_1794870529170": {
+          "id": "assign_1794870529170",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "daenemy:=15",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "loop_1794870868999",
+          "selected": false,
+          "running": false
+        },
+        "assign_1794870531197": {
+          "id": "assign_1794870531197",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "player:=100",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "assign1",
+          "selected": false,
+          "running": false
+        },
+        "loop_1794870841450": {
+          "id": "loop_1794870841450",
+          "type": "Diamond",
+          "kind": "Loop",
+          "text": "enemy >= 0",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "beforeId": null,
+          "afterId": null,
+          "selected": false,
+          "running": false
+        },
+        "loop_1794870868999": {
+          "id": "loop_1794870868999",
+          "type": "Diamond",
+          "kind": "Loop",
+          "text": "enemy <= 0 or player <= 0",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "select_1794871746691",
+          "beforeId": null,
+          "afterId": "input_1794870942276",
+          "selected": false,
+          "running": false
+        },
+        "input_1794870942276": {
+          "id": "input_1794870942276",
+          "type": "Parallelogram",
+          "ioKind": "Input",
+          "text": "disparar",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "select_1794871055137",
+          "selected": false,
+          "prompt": "\"Desea disparar\"",
+          "running": false
+        },
+        "select_1794871055137": {
+          "id": "select_1794871055137",
+          "type": "Diamond",
+          "kind": "Selection",
+          "text": "disparar == \"si\"",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "assign_1794871213930",
+          "yesId": "assignment_1794871090876",
+          "noId": "assignment_1794871193524",
+          "selected": false,
+          "running": false
+        },
+        "assignment_1794871090876": {
+          "id": "assignment_1794871090876",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "enemy:=enemy - daplayer",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "output_1794871125433",
+          "selected": false,
+          "running": false
+        },
+        "output_1794871125433": {
+          "id": "output_1794871125433",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"You attacked an enemy\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "assignment_1794871193524": {
+          "id": "assignment_1794871193524",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "player:=player - daenemy",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "output_1794871279923",
+          "selected": false,
+          "running": false
+        },
+        "assign_1794871213930": {
+          "id": "assign_1794871213930",
+          "type": "Rectangle",
+          "kind": "Assignment",
+          "text": "player:=player - 5",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "output_1794871338324",
+          "selected": false,
+          "running": false
+        },
+        "output_1794871279923": {
+          "id": "output_1794871279923",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"Enemy is attacking you\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "output_1794871338324": {
+          "id": "output_1794871338324",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"You are being Attack\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "select_1794871746691": {
+          "id": "select_1794871746691",
+          "type": "Diamond",
+          "kind": "Selection",
+          "text": "player <= 0",
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": "end",
+          "yesId": "output_1794871779830",
+          "noId": "output_1794871815833",
+          "selected": false,
+          "running": false
+        },
+        "output_1794871779830": {
+          "id": "output_1794871779830",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"You lose\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": false,
+          "running": false
+        },
+        "output_1794871815833": {
+          "id": "output_1794871815833",
+          "type": "Parallelogram",
+          "ioKind": "Output",
+          "text": "\"You won\"",
+          "newLine": true,
+          "H": 60,
+          "W": 90,
+          "X": 0,
+          "Y": 0,
+          "FP": {
+            "left": 0,
+            "right": 0,
+            "height": 0
+          },
+          "successorId": null,
+          "selected": true,
+          "running": false
+        }
+      },
+      "startId": "start",
+      "endId": "end"
+    }
+  }
+}
