@@ -1,5 +1,6 @@
 # Echoes-Of-Nexus-Proyecto-Integrador
 Proyecto Integrador, Abdiel Montufar, David Davila, Carlos Sukasi 
+Video de Explicacion: https://www.youtube.com/watch?v=dADLtOHkC4w
 
 # Echoes of Nexus
 
